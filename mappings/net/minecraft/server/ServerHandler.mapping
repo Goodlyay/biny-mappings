@@ -1,0 +1,87 @@
+CLASS net/minecraft/class_166 net/minecraft/server/ServerHandler
+	FIELD field_577 logger Ljava/util/logging/Logger;
+	FIELD field_578 players Ljava/util/List;
+	FIELD field_579 server Lnet/minecraft/server/MinecraftServer;
+	FIELD field_580 wipDimensions [Lnet/minecraft/class_167;
+	FIELD field_581 maxPlayers I
+	FIELD field_582 bannedPlayers Ljava/util/Set;
+	FIELD field_583 bannedPlayerIps Ljava/util/Set;
+	FIELD field_584 ops Ljava/util/Set;
+	FIELD field_585 whitelistedPlayers Ljava/util/Set;
+	FIELD field_586 bannedPlayersFile Ljava/io/File;
+	FIELD field_587 bannedIpsFile Ljava/io/File;
+	FIELD field_588 opsFile Ljava/io/File;
+	FIELD field_589 whitelistFile Ljava/io/File;
+	FIELD field_590 playerDataSerializer Lnet/minecraft/class_168;
+	FIELD field_591 whitelist Z
+	METHOD <init> (Lnet/minecraft/server/MinecraftServer;)V
+		ARG 1 server
+	METHOD method_550 sendPacketToArea (DDDDILnet/minecraft/class_169;)V
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+		ARG 7 distance
+		ARG 9 dimension
+		ARG 10 packet
+	METHOD method_555 handleRespawn (Lnet/minecraft/class_69;I)Lnet/minecraft/class_69;
+		ARG 2 dimensionId
+	METHOD method_556 syncTimeAndWeather (Lnet/minecraft/class_69;Lnet/minecraft/class_73;)V
+		ARG 1 player
+		ARG 2 world
+	METHOD method_558 sendPacketToArea (Lnet/minecraft/class_54;DDDDILnet/minecraft/class_169;)V
+		ARG 1 excludedPlayer
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+		ARG 8 distance
+		ARG 10 dimension
+		ARG 11 packet
+	METHOD method_559 sendPacketToPlayers (Lnet/minecraft/class_169;)V
+	METHOD method_560 sendPacketToPlayers (Lnet/minecraft/class_169;I)V
+		ARG 2 dimensionId
+	METHOD method_561 addBan (Ljava/lang/String;)V
+		ARG 1 playerName
+	METHOD method_562 sendPacket (Ljava/lang/String;Lnet/minecraft/class_169;)Z
+		ARG 1 playerName
+	METHOD method_563 sendMessage (Ljava/lang/String;Ljava/lang/String;)V
+		ARG 1 playerName
+		ARG 2 message
+	METHOD method_564 initPlayerDataSerializer ([Lnet/minecraft/class_73;)V
+		ARG 1 dimensions
+	METHOD method_565 wipTick ()V
+	METHOD method_566 loadPlayerData (Lnet/minecraft/class_69;)V
+		ARG 1 serverPlayerEntity
+	METHOD method_567 removeBan (Ljava/lang/String;)V
+		ARG 1 playerName
+	METHOD method_568 playerNameList ()Ljava/lang/String;
+	METHOD method_570 addIpBan (Ljava/lang/String;)V
+		ARG 1 ipBan
+	METHOD method_571 savePlayerData ()V
+	METHOD method_573 removeIpBan (Ljava/lang/String;)V
+		ARG 1 ipBan
+	METHOD method_574 getWhitelistedPlayers ()Ljava/util/Set;
+	METHOD method_576 addOp (Ljava/lang/String;)V
+		ARG 1 playerName
+	METHOD method_577 reloadWhitelist ()V
+	METHOD method_579 removeOp (Ljava/lang/String;)V
+		ARG 1 playerName
+	METHOD method_580 loadBans ()V
+	METHOD method_582 isWhitelisted (Ljava/lang/String;)Z
+		ARG 1 playerName
+	METHOD method_583 saveBans ()V
+	METHOD method_584 isOp (Ljava/lang/String;)Z
+		ARG 1 playerName
+	METHOD method_585 loadIpBans ()V
+	METHOD method_586 getPlayer (Ljava/lang/String;)Lnet/minecraft/class_69;
+		ARG 1 playerName
+	METHOD method_587 saveIpBans ()V
+	METHOD method_588 sendOpMessage (Ljava/lang/String;)V
+		ARG 1 message
+	METHOD method_589 loadOps ()V
+	METHOD method_590 addWhitelist (Ljava/lang/String;)V
+		ARG 1 playerName
+	METHOD method_591 saveOps ()V
+	METHOD method_592 removeWhitelist (Ljava/lang/String;)V
+		ARG 1 playerName
+	METHOD method_593 loadWhitelist ()V
+	METHOD method_594 saveWhitelist ()V

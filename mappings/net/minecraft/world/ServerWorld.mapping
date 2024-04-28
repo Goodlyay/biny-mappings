@@ -1,0 +1,5 @@
+CLASS net/minecraft/class_73 net/minecraft/world/ServerWorld
+	FIELD field_276 server Lnet/minecraft/server/MinecraftServer;
+	METHOD <init> (Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/class_52;Ljava/lang/String;IJ)V
+		ARG 1 server
+		ARG 2 levelDataIo

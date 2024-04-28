@@ -1,2 +1,16 @@
 CLASS net/minecraft/server/MinecraftServer net/minecraft/server/MinecraftServer
+	FIELD field_2837 logger Ljava/util/logging/Logger;
+	FIELD field_2840 properties Lnet/minecraft/class_391;
+	FIELD field_2841 serverWorlds [Lnet/minecraft/class_73;
+	FIELD field_2842 serverHandler Lnet/minecraft/class_166;
 	FIELD field_2848 onlineMode Z
+	FIELD field_2852 commandHandler Lnet/minecraft/class_426;
+	FIELD field_2853 running Z
+	FIELD field_2855 queuedCommands Ljava/util/List;
+	METHOD method_2156 stop ()V
+	METHOD method_2160 createFile (Ljava/lang/String;)Ljava/io/File;
+		ARG 1 path
+	METHOD method_2162 queueCommand (Ljava/lang/String;Lnet/minecraft/class_39;)V
+		ARG 1 commandContents
+	METHOD method_2164 executeQueuedCommands ()V
+	METHOD method_2171 wipTick ()V

@@ -1,4 +1,5 @@
 CLASS net/minecraft/class_43 net/minecraft/world/chunk/Chunk
+	FIELD field_953 wipHasSkyLight Z
 	FIELD field_954 blocks [B
 	FIELD field_956 world Lnet/minecraft/class_18;
 	FIELD field_957 meta Lnet/minecraft/class_257;

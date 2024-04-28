@@ -1,0 +1,7 @@
+CLASS net/minecraft/class_454 net/minecraft/world/ClientServerWorld
+	FIELD field_1722 linkedList Ljava/util/LinkedList;
+	FIELD field_1723 clientNetworkHandler Lnet/minecraft/class_219;
+	FIELD field_1724 mysteryClass1 Lnet/minecraft/class_455;
+	FIELD field_1725 mysteryClass2 Lnet/minecraft/class_80;
+	FIELD field_1726 hashSet1 Ljava/util/Set;
+	FIELD field_1727 hashSet2 Ljava/util/Set;

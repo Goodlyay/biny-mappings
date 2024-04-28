@@ -1,7 +1,15 @@
 CLASS net/minecraft/class_18 net/minecraft/world/World
 	FIELD field_180 isRemote Z
+	FIELD field_202 ambientDarkness I
+	FIELD field_205 lastTickWetness F
+	FIELD field_206 currentTickWetness F
+	FIELD field_207 lastTickThunderness F
+	FIELD field_208 currentTickThunderness F
+	FIELD field_209 lightningFlashTimer I
+	FIELD field_210 int2 I
+	FIELD field_214 random Ljava/util/Random;
 	FIELD field_216 dimension Lnet/minecraft/class_50;
-	FIELD field_219 dimensionData Lnet/minecraft/class_52;
+	FIELD field_219 levelDataIo Lnet/minecraft/class_52;
 	FIELD field_220 properties Lnet/minecraft/class_7;
 	FIELD field_222 persistentStateManager Lnet/minecraft/class_53;
 	METHOD <init> (Lnet/minecraft/class_18;Lnet/minecraft/class_50;)V
@@ -23,8 +31,18 @@ CLASS net/minecraft/class_18 net/minecraft/world/World
 	METHOD method_150 playSound (DDDLjava/lang/String;FF)V
 	METHOD method_156 (IIIIZI)Z
 		ARG 6 side
+	METHOD method_158 wipGetBrightness (IIIZ)I
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 fromNeighborsIfNonSolid
 	METHOD method_159 setTime (J)V
 		ARG 1 time
+	METHOD method_164 getLight (Lnet/minecraft/class_56;III)I
+		ARG 1 lightType
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
 	METHOD method_168 canSpawnEntity (Lnet/minecraft/class_25;)Z
 		ARG 1 box
 	METHOD method_172 (Lnet/minecraft/class_54;IIII)V
@@ -51,6 +69,8 @@ CLASS net/minecraft/class_18 net/minecraft/world/World
 	METHOD method_208 getIdCount (Ljava/lang/String;)I
 		ARG 1 id
 	METHOD method_211 getEntities (Lnet/minecraft/class_57;Lnet/minecraft/class_25;)Ljava/util/List;
+	METHOD method_213 getThunderness (F)F
+		ARG 1 maxValue
 	METHOD method_215 (IIII)V
 		ARG 1 x
 		ARG 2 y
@@ -62,6 +82,8 @@ CLASS net/minecraft/class_18 net/minecraft/world/World
 		ARG 4 sizeX
 		ARG 5 sizeY
 		ARG 6 sizeZ
+	METHOD method_221 getWetness (F)F
+		ARG 1 maxValue
 	METHOD method_222 getTopY (II)I
 	METHOD method_223 (IIII)Z
 		ARG 1 x
@@ -76,16 +98,27 @@ CLASS net/minecraft/class_18 net/minecraft/world/World
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
+	METHOD method_242 tick ()V
 	METHOD method_243 (III)V
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
+	METHOD method_245 tickWeather ()V
+	METHOD method_251 checkSessionLock ()V
 	METHOD method_253 (IIII)V
 		ARG 1 x
 		ARG 2 t
 		ARG 3 z
 	METHOD method_254 getSeed ()J
+	METHOD method_255 getBrightness (III)I
 	METHOD method_256 getTime ()J
 	METHOD method_258 getSpawnPos ()Lnet/minecraft/class_63;
+	METHOD method_261 getDimensionData ()Lnet/minecraft/class_52;
+	METHOD method_262 getWorldProperties ()Lnet/minecraft/class_7;
+	METHOD method_269 isThundering ()Z
+	METHOD method_270 isRaining ()Z
+	METHOD method_273 resetWeatherProperties ()V
 	METHOD method_276 setSpawnPos (Lnet/minecraft/class_63;)V
 		ARG 1 pos
+	METHOD method_289 setWetness (F)V
+		ARG 1 wetness

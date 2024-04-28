@@ -1,0 +1,14 @@
+CLASS net/minecraft/class_52 net/minecraft/world/dimension/LevelDataIo
+	METHOD method_1732 saveLevelData (Lnet/minecraft/class_7;)V
+		ARG 1 worldProperties
+	METHOD method_1733 saveLevelDataWithPlayer (Lnet/minecraft/class_7;Ljava/util/List;)V
+		ARG 1 worldProperties
+		ARG 2 player
+	METHOD method_1734 createChunkHandlerWip (Lnet/minecraft/class_50;)Lnet/minecraft/class_243;
+		ARG 1 dimension
+	METHOD method_1735 checkSessionLock ()V
+	METHOD method_1736 getWorldDataPath (Ljava/lang/String;)Ljava/io/File;
+		ARG 1 datFileName
+	METHOD method_1737 readWorldProperties ()Lnet/minecraft/class_7;
+	METHOD method_1738 asPlayerDataSerializer ()Lnet/minecraft/class_168;
+	METHOD method_1739 dimensionDataServerMethod ()V

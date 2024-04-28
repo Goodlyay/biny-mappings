@@ -1,0 +1,2 @@
+CLASS net/minecraft/class_167 net/minecraft/wipDimension
+	METHOD method_1748 wipFalseOnTick (Lnet/minecraft/class_69;)V
